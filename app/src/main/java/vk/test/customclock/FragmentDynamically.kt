@@ -1,7 +1,6 @@
 package vk.test.customclock
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.Button
@@ -46,8 +45,6 @@ class FragmentDynamically : Fragment(R.layout.fragment_dynamical) {
 
         slider = savedInstanceState?.getDouble(SLIDER_KEY)?:1.0
 
-        Log.d("TestSlider", "Get slider $slider")
-
         getViews()
 
         listeners()
@@ -73,7 +70,6 @@ class FragmentDynamically : Fragment(R.layout.fragment_dynamical) {
 
             override fun onStopTrackingTouch(p0: SeekBar?) {
                 slider = sizeSeekBar.progress.toDouble()/sizeSeekBar.max
-                Log.d("TestSlider", "Slider change $slider")
             }
         })
 
@@ -103,7 +99,6 @@ class FragmentDynamically : Fragment(R.layout.fragment_dynamical) {
                 val maxRadius = min - min / 24 - 48
                 sizeSeekBar.max = maxRadius
                 sizeSeekBar.progress = (maxRadius* slider!!).toInt()
-                Log.d("TestSlider", "observe: max = $maxRadius;slider = $slider; progress = ${maxRadius* slider!!.toInt()}")
             }
         })
     }
@@ -163,7 +158,6 @@ class FragmentDynamically : Fragment(R.layout.fragment_dynamical) {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putBoolean(CHANGE_COLOR_KEY, changeColor)
-        Log.d("TestSlider", "Put slider $slider")
         outState.putDouble(SLIDER_KEY, slider!!)
     }
 
