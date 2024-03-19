@@ -7,4 +7,12 @@
     <color name="hourHandColor">#000000</color>
     <color name="minuteHandColor">#FF000000</color>
     <color name="secondHandColor">#FF0000</color>
+
+    <color name="newBaseColor">#FFFFFF</color>
+    <color name="newTextColor">#0040FF</color>
+    <color name="newFrameColor">#0040FF</color>
+    <color name="newDotsColor">#0040FF</color>
+    <color name="newHourHandColor">#000000</color>
+    <color name="newMinuteHandColor">#FF000000</color>
+    <color name="newSecondHandColor">#FF0000</color>
 </resources>

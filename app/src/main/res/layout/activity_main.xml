@@ -8,42 +8,13 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <vk.test.customclock.CustomAnalogClockView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            />
-        <vk.test.customclock.CustomAnalogClockView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            />
-        <vk.test.customclock.CustomAnalogClockView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:baseColor="@color/grey"
-            app:textColor="@color/black"
-            app:frameColor="@color/purple_700"
-            app:dotsColor="@color/purple_500"
-            app:hourHandColor="@color/purple_500"
-            app:minuteHandColor="@color/purple_700"
-            app:secondHandColor="@color/red"
-            />
-    </LinearLayout>
-
-    <vk.test.customclock.CustomAnalogClockView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-
-    <vk.test.customclock.CustomAnalogClockView
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 
 </LinearLayout>

@@ -23,10 +23,10 @@ private const val START_ANGLE = -Math.PI / 2
 private const val REFRESH_PERIOD = 180L
 
 // Default width of the view in dp
-private const val DEFAULT_WIDTH_IN_DP = 240
+private const val DEFAULT_WIDTH_IN_DP = 150
 
 // Default height of the view in dp
-private const val DEFAULT_HEIGHT_IN_DP = 240
+private const val DEFAULT_HEIGHT_IN_DP = 150
 
 class CustomAnalogClockView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -268,6 +268,38 @@ class CustomAnalogClockView @JvmOverloads constructor(
 
         setMeasuredDimension(widthToSet, heightToSet)
     }
+
+    // Color of the clock's base
+    fun setBaseColor(newColor: Int){
+        baseColor = newColor
+    }
+    fun setTextColor(newColor: Int){
+        textColor = newColor
+    }
+    fun setFrameColor(newColor: Int){
+        frameColor = newColor
+    }
+    fun setDotsColor(newColor: Int){
+        dotsColor = newColor
+    }
+    fun setHourHandColor(newColor: Int){
+        hourHandColor = newColor
+    }
+    fun setMinHandColor(newColor: Int){
+        minuteHandColor = newColor
+    }
+    fun setSecHandColor(newColor: Int){
+        secondHandColor = newColor
+    }
+
+    fun setRadius(newRadius: Int){
+        clockRadius = newRadius.toFloat()
+    }
+
+    fun getRadius():Float = clockRadius
+
+
+
 
     // Saving instance state to survive configuration changes
     override fun onSaveInstanceState(): Parcelable {
