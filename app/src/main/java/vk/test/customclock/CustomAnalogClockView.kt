@@ -28,7 +28,7 @@ private const val DEFAULT_WIDTH_IN_DP = 240
 // Default height of the view in dp
 private const val DEFAULT_HEIGHT_IN_DP = 240
 
-class CustomAnalogClock @JvmOverloads constructor(
+class CustomAnalogClockView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
     // Radius of the clock
@@ -44,56 +44,56 @@ class CustomAnalogClock @JvmOverloads constructor(
     private val position: PointF = PointF(0.0f, 0.0f)
 
     // Color of the clock's base
-    var baseColor = 0
+    private var baseColor = 0
 
     // Color of the hour labels
-    var textColor = 0
+    private var textColor = 0
 
     // Color of the border's color
-    var frameColor = 0
+    private var frameColor = 0
 
     // Color of the dots on the clock
-    var dotsColor = 0
+    private var dotsColor = 0
 
     // Color of the hour hand
-    var hourHandColor = 0
+    private var hourHandColor = 0
 
     // Color of the minute hand
-    var minuteHandColor = 0
+    private var minuteHandColor = 0
 
     // Color of the second hand
-    var secondHandColor = 0
+    private var secondHandColor = 0
 
     init {
         // Set the values of colors
-        context.withStyledAttributes(attrs, R.styleable.ClockView) {
+        context.withStyledAttributes(attrs, R.styleable.CustomAnalogClockView) {
             baseColor = getColor(
-                R.styleable.ClockView_baseColor,
-                ContextCompat.getColor(context, R.color.light_gray)
+                R.styleable.CustomAnalogClockView_baseColor,
+                ContextCompat.getColor(context, R.color.baseColor)
             )
             textColor = getColor(
-                R.styleable.ClockView_textColor,
-                ContextCompat.getColor(context, R.color.black)
+                R.styleable.CustomAnalogClockView_textColor,
+                ContextCompat.getColor(context, R.color.textColor)
             )
             frameColor = getColor(
-                R.styleable.ClockView_frameColor,
-                ContextCompat.getColor(context, R.color.black)
+                R.styleable.CustomAnalogClockView_frameColor,
+                ContextCompat.getColor(context, R.color.frameColor)
             )
             dotsColor = getColor(
-                R.styleable.ClockView_dotsColor,
-                ContextCompat.getColor(context, R.color.black)
+                R.styleable.CustomAnalogClockView_dotsColor,
+                ContextCompat.getColor(context, R.color.dotsColor)
             )
             hourHandColor = getColor(
-                R.styleable.ClockView_hourHandColor,
-                ContextCompat.getColor(context, R.color.black)
+                R.styleable.CustomAnalogClockView_hourHandColor,
+                ContextCompat.getColor(context, R.color.hourHandColor)
             )
             minuteHandColor = getColor(
-                R.styleable.ClockView_minuteHandColor,
-                ContextCompat.getColor(context, R.color.black)
+                R.styleable.CustomAnalogClockView_minuteHandColor,
+                ContextCompat.getColor(context, R.color.minuteHandColor)
             )
             secondHandColor = getColor(
-                R.styleable.ClockView_secondHandColor,
-                ContextCompat.getColor(context, R.color.red)
+                R.styleable.CustomAnalogClockView_secondHandColor,
+                ContextCompat.getColor(context, R.color.secondHandColor)
             )
         }
     }

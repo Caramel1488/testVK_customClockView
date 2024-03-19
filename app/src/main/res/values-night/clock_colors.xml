@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="baseColor">#000000</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="frameColor">#FFFFFF</color>
+    <color name="dotsColor">#FFFFFF</color>
+    <color name="hourHandColor">#FFFFFF</color>
+    <color name="minuteHandColor">#FFFFFF</color>
+    <color name="secondHandColor">#FF0000</color>
+</resources>

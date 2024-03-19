@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ClockView">
+    <declare-styleable name="CustomAnalogClockView">
         <attr name="baseColor" format="color" />
         <attr name="textColor" format="color" />
         <attr name="frameColor" format="color" />
